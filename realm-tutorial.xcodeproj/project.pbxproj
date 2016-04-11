@@ -18,6 +18,7 @@
 		251D6B921CB3F174008559E1 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 251D6B8F1CB3F174008559E1 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		251D6B931CB3F174008559E1 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 251D6B901CB3F174008559E1 /* RealmSwift.framework */; };
 		251D6B941CB3F174008559E1 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 251D6B901CB3F174008559E1 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		25E7CD491CBB331700351303 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E7CD481CBB331700351303 /* Book.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		251D6B831CB3E395008559E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		251D6B8F1CB3F174008559E1 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		251D6B901CB3F174008559E1 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		25E7CD481CBB331700351303 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				251D6B681CB3E395008559E1 /* Assets.xcassets */,
 				251D6B6A1CB3E395008559E1 /* LaunchScreen.storyboard */,
 				251D6B6D1CB3E395008559E1 /* Info.plist */,
+				25E7CD481CBB331700351303 /* Book.swift */,
 			);
 			path = "realm-tutorial";
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 			files = (
 				251D6B641CB3E395008559E1 /* ViewController.swift in Sources */,
 				251D6B621CB3E395008559E1 /* AppDelegate.swift in Sources */,
+				25E7CD491CBB331700351303 /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,6 +539,7 @@
 				251D6B881CB3E395008559E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		251D6B891CB3E395008559E1 /* Build configuration list for PBXNativeTarget "realm-tutorialTests" */ = {
 			isa = XCConfigurationList;
@@ -543,6 +548,7 @@
 				251D6B8B1CB3E395008559E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		251D6B8C1CB3E395008559E1 /* Build configuration list for PBXNativeTarget "realm-tutorialUITests" */ = {
 			isa = XCConfigurationList;
@@ -551,6 +557,7 @@
 				251D6B8E1CB3E395008559E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

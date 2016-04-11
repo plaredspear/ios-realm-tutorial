@@ -7,18 +7,15 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ViewController: UITableViewController {
     @IBOutlet var textInput: UITextField!
     
-    var array = [String]()
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        array.append("WOWO")
-        array.append("WOWO2")
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,13 +24,19 @@ class ViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.array.count
+        let realm = try! Realm()
+        let books = realm.objects(Book)
+        
+        return books.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let row = self.array[indexPath.row]
+        let realm = try! Realm()
+        let books = realm.objects(Book)
+        
+        let row = books[indexPath.row]
         let cell = tableView.dequeueReusableCellWithIdentifier("ListCell") as UITableViewCell!
-        cell.textLabel?.text = row
+        cell.textLabel?.text = row.title
         return cell
     }
 
@@ -43,7 +46,15 @@ class ViewController: UITableViewController {
     
     @IBAction func addText(sender: AnyObject) {
         if let text = textInput.text {
-            array.append(text)
+            let newBook = Book()
+            newBook.title = text
+            
+            let realm = try! Realm()
+            
+            try! realm.write {
+                realm.add(newBook)
+            }
+            
             textInput.text = ""
         }
         
